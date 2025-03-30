@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
@@ -50,9 +49,9 @@ export default function PhotoCard({
           
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
             <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-              <h3 className="text-white font-medium text-lg mb-1">{title}</h3>
+              <h3 className="text-white font-medium text-lg mb-1 select-none">{title}</h3>
               {description && (
-                <p className="text-white/80 text-sm">{description}</p>
+                <p className="text-white/80 text-sm select-none">{description}</p>
               )}
             </div>
           </div>
