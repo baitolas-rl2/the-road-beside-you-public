@@ -1,5 +1,7 @@
-
 import { useRef, useEffect } from "react";
+
+// Definindo o caminho base dinamicamente
+const basePath = import.meta.env.DEV ? "/" : import.meta.env.BASE_URL;
 
 interface BackgroundMusicProps {
   isPlaying: boolean;
@@ -23,7 +25,7 @@ export default function BackgroundMusic({ isPlaying }: BackgroundMusicProps) {
   return (
     <audio
       ref={audioRef}
-      src="/lovable-uploads/lofi-romance.mp3"
+      src={`${basePath}lovable-uploads/lofi-romance.mp3`}
       loop
       preload="auto"
       className="hidden"
